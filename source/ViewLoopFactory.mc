@@ -4,9 +4,9 @@ import Toybox.WatchUi;
 
 class ViewLoopFactory extends WatchUi.ViewLoopFactory {
     private var objects;
-    function initialize(objectsToDisplay) {
+    function initialize(objects) {
         ViewLoopFactory.initialize();
-        objects = objectsToDisplay;
+        self.objects = objects;
     }
 
     function getView(page as Number) as [View] or [View, BehaviorDelegate] {

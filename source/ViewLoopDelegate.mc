@@ -3,20 +3,20 @@ import Toybox.WatchUi;
 
 class ViewLoopDelegate extends WatchUi.ViewLoopDelegate {
 
-    private var mViewLoop as ViewLoop;
+    private var viewLoop as ViewLoop;
 
     function initialize(viewLoop as ViewLoop) {
         ViewLoopDelegate.initialize(viewLoop);
-        mViewLoop = viewLoop;
+        self.viewLoop = viewLoop;
     }
 
     function onNextView() {
-        mViewLoop.changeView(WatchUi.ViewLoop.DIRECTION_NEXT);
+        viewLoop.changeView(WatchUi.ViewLoop.DIRECTION_NEXT);
         return true;
     }
 
     function onPreviousView() {
-        mViewLoop.changeView(WatchUi.ViewLoop.DIRECTION_PREVIOUS);
+        viewLoop.changeView(WatchUi.ViewLoop.DIRECTION_PREVIOUS);
         return true;
     }
 }
