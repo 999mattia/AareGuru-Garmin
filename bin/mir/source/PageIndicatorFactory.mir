@@ -1,0 +1,59 @@
+[ @file = "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorFactory.mc"; @line = 1; ]
+import Toybox.Graphics;
+[ @file = "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorFactory.mc"; @line = 2; ]
+import Toybox.Lang;
+[ @file = "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorFactory.mc"; @line = 3; ]
+import Toybox.WatchUi;
+[ @file = "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorFactory.mc"; @line = 5; ]
+class PageIndicatorFactory extends WatchUi.ViewLoopFactory{
+    [ @file = "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorFactory.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorFactory.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorFactory.mc"; @line = 6; @position = 18; ]
+    private
+    const NUM_PAGES = 8;
+    [ @file = "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorFactory.mc"; @line = 8; ]
+    function initialize() as Void {
+_Users_mattia_code_AareGuruGarmin_source_PageIndicatorFactory_mc_8_26_10_4_start:
+[ "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorFactory.mc" 9 8 ]
+        %tmp.2 = getv ? :ViewLoopFactory;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_mattia_code_AareGuruGarmin_source_PageIndicatorFactory_mc_8_26_10_4_stop:
+    }
+    [ @file = "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorFactory.mc"; @line = 12; ]
+    function getView(page as Number) as [View] or [View, BehaviorDelegate] {
+_Users_mattia_code_AareGuruGarmin_source_PageIndicatorFactory_mc_12_75_14_4_start:
+[ "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorFactory.mc" 13 8 ]
+        %tmp.1 = newa 2;
+        %tmp.5 = getm $;
+        %tmp.6 = getv %tmp.5 :PrimatesView;
+        %tmp.8 = lgetv %page;
+        %tmp.2 = newc %tmp.6 (%tmp.8);
+        %tmp.9 = dup %tmp.1;
+        %tmp.10 = aputv %tmp.9 0 %tmp.2;
+        %tmp.14 = getm $;
+        %tmp.15 = getv %tmp.14 :PrimatesViewLoopDelegate;
+        %tmp.17 = lgetv %page;
+        %tmp.11 = newc %tmp.15 (%tmp.17);
+        %tmp.18 = dup %tmp.10;
+        %tmp.19 = aputv %tmp.18 1 %tmp.11;
+        ret %tmp.19;
+_Users_mattia_code_AareGuruGarmin_source_PageIndicatorFactory_mc_12_75_14_4_stop:
+    }
+    [ @file = "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorFactory.mc"; @line = 16; ]
+    function getSize() {
+_Users_mattia_code_AareGuruGarmin_source_PageIndicatorFactory_mc_16_23_18_4_start:
+[ "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorFactory.mc" 17 8 ]
+        %tmp.2 = getv ? :NUM_PAGES;
+        ret %tmp.2;
+_Users_mattia_code_AareGuruGarmin_source_PageIndicatorFactory_mc_16_23_18_4_stop:
+    }
+}
+[ @file = "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorFactory.mc"; @line = 1; ]
+<init> {
+}

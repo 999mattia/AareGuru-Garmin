@@ -1,0 +1,33 @@
+[ @file = "/Users/mattia/code/AareGuruGarmin/source/PrimatesViewLoopDelegate.mc"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "/Users/mattia/code/AareGuruGarmin/source/PrimatesViewLoopDelegate.mc"; @line = 2; ]
+import Toybox.WatchUi;
+[ @file = "/Users/mattia/code/AareGuruGarmin/source/PrimatesViewLoopDelegate.mc"; @line = 4; ]
+class PrimatesViewLoopDelegate extends WatchUi.BehaviorDelegate{
+    [ @file = "/Users/mattia/code/AareGuruGarmin/source/PrimatesViewLoopDelegate.mc"; @line = 4; ]
+    <init> {
+    }
+    [ @file = "/Users/mattia/code/AareGuruGarmin/source/PrimatesViewLoopDelegate.mc"; @line = 4; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/mattia/code/AareGuruGarmin/source/PrimatesViewLoopDelegate.mc"; @line = 5; @position = 16; ]
+    private
+    var _index as Number;
+    [ @file = "/Users/mattia/code/AareGuruGarmin/source/PrimatesViewLoopDelegate.mc"; @line = 7; ]
+    public
+    function initialize(index as Number) as Void {
+_Users_mattia_code_AareGuruGarmin_source_PrimatesViewLoopDelegate_mc_7_48_10_4_start:
+[ "/Users/mattia/code/AareGuruGarmin/source/PrimatesViewLoopDelegate.mc" 8 8 ]
+        %tmp.2 = getv ? :BehaviorDelegate;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/mattia/code/AareGuruGarmin/source/PrimatesViewLoopDelegate.mc" 9 8 ]
+        %tmp.5 = lgetv %index;
+        putv self :_index %tmp.5;
+_Users_mattia_code_AareGuruGarmin_source_PrimatesViewLoopDelegate_mc_7_48_10_4_stop:
+    }
+}
+[ @file = "/Users/mattia/code/AareGuruGarmin/source/PrimatesViewLoopDelegate.mc"; @line = 1; ]
+<init> {
+}

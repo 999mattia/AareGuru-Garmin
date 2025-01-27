@@ -1,0 +1,63 @@
+[ @file = "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorDelegate.mc"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorDelegate.mc"; @line = 2; ]
+import Toybox.WatchUi;
+[ @file = "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorDelegate.mc"; @line = 4; ]
+class ViewLoopDelegate extends WatchUi.ViewLoopDelegate{
+    [ @file = "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorDelegate.mc"; @line = 4; ]
+    <init> {
+    }
+    [ @file = "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorDelegate.mc"; @line = 4; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorDelegate.mc"; @line = 6; @position = 16; ]
+    private
+    var mViewLoop as ViewLoop;
+    [ @file = "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorDelegate.mc"; @line = 8; ]
+    function initialize(viewLoop as ViewLoop) as Void {
+_Users_mattia_code_AareGuruGarmin_source_PageIndicatorDelegate_mc_8_46_11_4_start:
+[ "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorDelegate.mc" 9 8 ]
+        %tmp.2 = getv ? :ViewLoopDelegate;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        %tmp.5 = lgetv %viewLoop;
+        invoke %tmp.2 %tmp.3(%tmp.5);
+[ "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorDelegate.mc" 10 8 ]
+        %tmp.7 = lgetv %viewLoop;
+        putv self :mViewLoop %tmp.7;
+_Users_mattia_code_AareGuruGarmin_source_PageIndicatorDelegate_mc_8_46_11_4_stop:
+    }
+    [ @file = "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorDelegate.mc"; @line = 13; ]
+    function onNextView() {
+_Users_mattia_code_AareGuruGarmin_source_PageIndicatorDelegate_mc_13_26_16_4_start:
+[ "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorDelegate.mc" 14 8 ]
+        %tmp.2 = getv ? :mViewLoop;
+        %tmp.3 = getv function %tmp.2 :changeView;
+        %tmp.4 = getm $.Toybox.WatchUi;
+        %tmp.5 = getv %tmp.4 :ViewLoop;
+        %tmp.6 = getv %tmp.5 :DIRECTION_NEXT;
+        invoke %tmp.2 %tmp.3(%tmp.6);
+[ "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorDelegate.mc" 15 8 ]
+        %tmp.7 = true;
+        ret %tmp.7;
+_Users_mattia_code_AareGuruGarmin_source_PageIndicatorDelegate_mc_13_26_16_4_stop:
+    }
+    [ @file = "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorDelegate.mc"; @line = 18; ]
+    function onPreviousView() {
+_Users_mattia_code_AareGuruGarmin_source_PageIndicatorDelegate_mc_18_30_21_4_start:
+[ "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorDelegate.mc" 19 8 ]
+        %tmp.2 = getv ? :mViewLoop;
+        %tmp.3 = getv function %tmp.2 :changeView;
+        %tmp.4 = getm $.Toybox.WatchUi;
+        %tmp.5 = getv %tmp.4 :ViewLoop;
+        %tmp.6 = getv %tmp.5 :DIRECTION_PREVIOUS;
+        invoke %tmp.2 %tmp.3(%tmp.6);
+[ "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorDelegate.mc" 20 8 ]
+        %tmp.7 = true;
+        ret %tmp.7;
+_Users_mattia_code_AareGuruGarmin_source_PageIndicatorDelegate_mc_18_30_21_4_stop:
+    }
+}
+[ @file = "/Users/mattia/code/AareGuruGarmin/source/PageIndicatorDelegate.mc"; @line = 1; ]
+<init> {
+}
