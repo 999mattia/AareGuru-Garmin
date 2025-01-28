@@ -19,9 +19,10 @@ Required installations:
 3. Open Command Palette and execute "Monkey C: Generate a Developer Key"
 4. Save the developer key to desired location
 5. Check in manifest.xml if your device is supoorted. If not, click the checkbox net to it to support it
-6. Open Command Palette and execute "Monkey C: Build for Device"
-7. Select your desired device
-8. Save the output to desired folder
-9. Connect your watch to your pc
-10. Access the watch in the file explorer and open the GARMIN/Apps folder (on Mac use Android File Explorer)
-11. Copy the .prg file from the output the the GARMIN/Apps folder
+6. In the App.mc file, edit the "cities" array to your liking
+7. Open Command Palette and execute "Monkey C: Build for Device"
+8. Select your desired device
+9. Save the output to desired folder
+10. Connect your watch to your pc
+11. Access the watch in the file explorer and open the GARMIN/Apps folder (on Mac use Android File Explorer)
+12. Copy the .prg file from the output the the GARMIN/Apps folder
