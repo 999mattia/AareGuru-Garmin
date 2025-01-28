@@ -21,15 +21,15 @@ class ViewLoopView extends WatchUi.View {
 
         dc.setColor(COLOR, Graphics.COLOR_TRANSPARENT);
         dc.drawText((dc.getWidth() / 2), (dc.getHeight() / 4), 
-                     Graphics.FONT_MEDIUM, object.name, 
+                     Graphics.FONT_SMALL, object.name, 
                      Graphics.TEXT_JUSTIFY_CENTER);
 
-        dc.drawText((dc.getWidth() / 2), (dc.getHeight() / 2), 
-                     Graphics.FONT_LARGE, object.temperature+"°", 
+        dc.drawText((dc.getWidth() / 2), (dc.getHeight() / 2.5), 
+                     Graphics.FONT_LARGE, object.temperature.format("%.1f")+"°", 
                      Graphics.TEXT_JUSTIFY_CENTER);
 
-        dc.drawText((dc.getWidth() / 2), (dc.getHeight() * 3 / 4), 
-                     Graphics.FONT_TINY, object.text, 
+        dc.drawText((dc.getWidth() / 2), (dc.getHeight() /1.75), 
+                     Graphics.FONT_SYSTEM_XTINY, object.text, 
                      Graphics.TEXT_JUSTIFY_CENTER);
     }
 }

@@ -5,10 +5,14 @@ import Toybox.Communications;
 
 class App extends Application.AppBase {
     private var objects = [];
+    private const cities = [
+        "bern",
+        "biel",
+    ];
 
     public function initialize() {
         AppBase.initialize();
-        makeRequest();
+        makeRequests();
     }
 
     public function onStart(state as Dictionary?) as Void {
@@ -24,8 +28,6 @@ class App extends Application.AppBase {
     function onReceive(responseCode as Number, data as Dictionary?) as Void {
         if (responseCode == 200) {
             var object = new Object(data["name"], data["aare"], data["text"]);
-            System.println(data["name"]);
-            System.println(object.name);
             objects.add(object);
             updateView();
         } else {
@@ -34,30 +36,33 @@ class App extends Application.AppBase {
     }
 
     function updateView() as Void {
-            var factory = new ViewLoopFactory(objects);
-            var viewLoop = new WatchUi.ViewLoop(factory, {
-                :page => 0,
-                :wrap => true,
-                :color => Graphics.COLOR_BLUE
-            });
+        var factory = new ViewLoopFactory(objects);
+        var viewLoop = new WatchUi.ViewLoop(factory, {
+            :page => 0,
+            :wrap => true,
+            :color => Graphics.COLOR_BLUE
+        });
         
-        WatchUi.switchToView(viewLoop, new ViewLoopDelegate(viewLoop),WatchUi.SLIDE_UP);
+        WatchUi.switchToView(viewLoop, new ViewLoopDelegate(viewLoop), WatchUi.SLIDE_UP);
     }
 
-    function makeRequest() as Void {
-        var url = "https://aareguru.existenz.ch/v2018/today?city=bern&app=github.com/999mattia/AareGuru-Garmin&version=1.0";
+    function makeRequests() as Void {
+        for (var i = 0; i < cities.size(); i++) {
+            var url = "https://aareguru.existenz.ch/v2018/today?city=" + cities[i] +
+                      "&app=github.com/999mattia/AareGuru-Garmin&version=1.0";
 
-        var params = {};
+            var params = {};
 
-        var options = {
-            :method => Communications.HTTP_REQUEST_METHOD_GET,
-            :headers => {
-                "Content-Type" => Communications.REQUEST_CONTENT_TYPE_JSON
-            },
-            :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON
-        };
+            var options = {
+                :method => Communications.HTTP_REQUEST_METHOD_GET,
+                :headers => {
+                    "Content-Type" => Communications.REQUEST_CONTENT_TYPE_JSON
+                },
+                :responseType => Communications.HTTP_RESPONSE_CONTENT_TYPE_JSON
+            };
 
-        Communications.makeWebRequest(url, params, options, method(:onReceive));
+            Communications.makeWebRequest(url, params, options, method(:onReceive));
+        }
     }
 }
 
