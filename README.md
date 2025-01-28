@@ -12,7 +12,7 @@ Required installations:
 
 -   Garmin Connect IQ SDK (https://formulae.brew.sh/cask/connectiq)
 -   Visual Studio Code (https://formulae.brew.sh/cask/visual-studio-code) with MonkeyC Extension
--   If you are on a Mac: (https://formulae.brew.sh/cask/android-file-transfer#default)
+-   If you are on a Mac: Android File Transfer (https://formulae.brew.sh/cask/android-file-transfer#default)
 
 1. Clone this repo
 2. Open the project in VS Code
