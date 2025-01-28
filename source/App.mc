@@ -5,6 +5,9 @@ import Toybox.Communications;
 
 class App extends Application.AppBase {
     private var objects = [];
+    //Add the cities you want to this array
+    //Maximum 4
+    //brienz, interlaken, thun, bern, hagneck. biel, olten, brugg
     private const cities = [
         "bern",
         "biel",
